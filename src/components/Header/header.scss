@@ -3,17 +3,35 @@
   height: 100px;
   background: black;
   display: flex;
+
   &__image {
-    width: 40%;
+    width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
   }
   &__options {
-    width: 60%;
+    width: 70%;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: white;
+    // border: 1px solid red;
+    & ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      // border: 1px solid blue;
+      display: flex;
+      width: 89%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    & a {
+      text-decoration: none;
+      color: aliceblue;
+      transition: 0.3s;
+      &:hover {
+        color: green;
+      }
+    }
   }
 }

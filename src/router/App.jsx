@@ -1,14 +1,15 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Header } from "../components/Header/Header";
-import { Main } from "../Pages/Main/Main";
+import { Home } from "../Pages/Home/Home";
+
 // import { Footer } from "../components/Footer/Footer";
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/main" replace />} />
-        <Route path="/main" element={<Main />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
 
       {/* <Footer /> */}
