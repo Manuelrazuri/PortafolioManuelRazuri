@@ -2,8 +2,6 @@ import React from "react";
 import "./header.scss";
 import manuel from "../../IMG/LogoManuel.svg";
 
-// import { NavLink, Link } from "react-router-dom";
-
 export const Header = () => {
   return (
     <div className="header">
@@ -13,18 +11,18 @@ export const Header = () => {
       <div className="header__options">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="/">Skills</a>
-          </li>
-
-          <li>
-            <a href="/">who i me?</a>
+            <a href="#skills">Skills</a>
           </li>
 
           <li>
-            <a href="/">Contact</a>
+            <a href="who-i-me">who i me?</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
