@@ -1,27 +1,45 @@
 import React from "react";
 import "./aboutMe.scss";
-import imageabout from "../../IMG/imageabout.svg";
+import Lottie from "react-lottie";
+import golifeData from "../../assets/lotties/golife.json";
+// import imageabout from "../../IMG/imageabout.svg";
 import { Button } from "primereact/button";
 
 export const AboutMe = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+    animationData: golifeData,
+  };
   return (
     <div className="aboutme" id="aboutme">
       <div className="aboutme__container">
-        <div className="aboutme__container-text">
+        <div
+          className="aboutme__container-text"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
           <h1>About Me</h1>
           <p>
-            ! Hola! mi nombre es Manuel Razuri, soy estudiante universitario de
-            ingeniera de sistemas e informática. me encanta investigar cada
-            tecnología nueva que sale en el mundo. cuento con experiencia como
-            analista ti. actualmente me estoy enfocando en aprender frotend de
-            forma constante e intensiva, para poder llegar a mis logros
-            correspondientes. si quieres saber más de mi puedes ingresar a mis
-            redes sociales y contáctame conmigo.
+            ! Hello! my name is Manuel Razuri, I am a university student of
+            systems engineering and computer science. I like to investigate
+            every new technology that comes out in the world, I have experience
+            as an IT analyst. I am currently focused on learning frontend
+            programming in a constant and intensive way, in order to reach my
+            corresponding achievements. If you want to know more about me you
+            can visit my social networks and contact me.
           </p>
           <Button label="Escribeme" />
         </div>
         <div className="aboutme__container-image">
-          <img src={imageabout} alt="imageabout" />
+          <Lottie
+            options={{ animationData: golifeData }}
+            width={320}
+            height={320}
+          />
         </div>
       </div>
     </div>

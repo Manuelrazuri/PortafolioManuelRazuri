@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #808080;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
   &__container {
     width: 80%;
     display: flex;
@@ -14,16 +18,22 @@
       justify-content: center;
       align-items: flex-end;
       & h1 {
-        font-size: 52px;
+        font-size: 140px;
         font-family: "Open Sans", sans-serif;
+        color: white;
+        text-shadow: 2px 2px 2px black;
       }
       & p {
-        font-size: 30px;
+        font-size: 60px;
         font-family: "Open Sans", sans-serif;
+        color: white;
+        text-shadow: 2px 2px 2px black;
       }
     }
     &-image {
+      display: flex;
       width: 50%;
+      justify-content: center;
     }
   }
 }
