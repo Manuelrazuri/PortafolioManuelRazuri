@@ -4,9 +4,27 @@ import Lottie from "react-lottie";
 import contactlogoData from "../../assets/lotties/contact-chat.json";
 
 export const Contact = () => {
-  const [nombre, setNombre] = useState("");
+  const [form, setForm] = useState({});
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // const handleChecked= e=>{
+  // setForm({
+  //   ...form,
+  //   [e.target.name]:e.target.cheked,
+  // });
+  // };
+
   // console.log([state]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("El Formulario fue enviado");
+  };
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -33,17 +51,50 @@ export const Contact = () => {
             <p>963-002-441</p>
           </div>
         </div>
-        <div classname="contact__container-form">
+        <div className="contact__container-formRegister">
           <h1>Contact</h1>
           <div>
-            <form>
-              <label htmlFor="nombre">Nombre</label>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="nombre">Nombres y Apellidos</label>
               <input
                 type="text"
                 id="nombre"
-                value={nombre}
-                onChange={(e) => setNombre(e.target.value)}
+                name="nombre"
+                placeholder="Nombre y apellido"
+                value={form.nombre}
+                onChange={handleChange}
               />
+              <label htmlFor="email">Correo Electronico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Correo Electronico"
+                value={form.email}
+                onChange={handleChange}
+              />
+              <label htmlFor="phone">Numero de celular</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+51"
+                value={form.phone}
+                onChange={handleChange}
+              />
+              <p>Escoge tu genero</p>
+              <select name="genero" onChange={handleChange} defaultValue="">
+                <option value="">---</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+              </select>
+              <label htmlFor="textarea">Mensaje</label>
+              <textarea
+                value={form.textarea}
+                onChange={handleChange}
+                name="texarea"
+              />
+              <input type="submit" />
             </form>
           </div>
         </div>
