@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="header__image">
-        <img src={manuel} alt="LogoManuel" width="140px" />
+        <img src={manuel} trigger="hidden" alt="LogoManuel" width="140px" />
       </div>
       <div className="header__options">
         <ul>

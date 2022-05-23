@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./contact.scss";
 import Lottie from "react-lottie";
 import contactlogoData from "../../assets/lotties/contact-chat.json";
+import map from "../../IMG/ubicacion.png";
+import mail from "../../IMG/gmail.svg";
+import cell from "../../IMG/celular.png";
 
 export const Contact = () => {
   const [form, setForm] = useState({});
@@ -41,60 +44,93 @@ export const Contact = () => {
           <div>
             <Lottie
               options={{ animationData: contactlogoData }}
-              width={320}
-              height={320}
+              width={300}
+              height={300}
             />
           </div>
           <div>
-            <p>Lima, Perú</p>
-            <p>manuel.r.seminario@gmail.com</p>
-            <p>963-002-441</p>
+            <div className="contact__container-info-map">
+              <div className="contact__container-info-map-planet">
+                <img src={map} alt="IconoMapa" width="40px" height="40px" />
+              </div>
+              <p>Lima, Perú</p>
+            </div>
+            <div className="contact__container-info-mail">
+              <div className="contact__container-info-mail-gmail">
+                <img src={mail} alt="IconoGmail" width="40px" height="40px" />
+              </div>
+              <p>manuel.r.seminario@gmail.com</p>
+            </div>
+            <div className="contact__container-info-mail">
+              <div className="contact__container-info-mail-gmail">
+                <img src={cell} alt="IconoGmail" width="40px" height="40px" />
+              </div>
+              <p>963-002-441</p>
+            </div>
           </div>
         </div>
         <div className="contact__container-formRegister">
           <h1>Contact</h1>
           <div>
             <form onSubmit={handleSubmit}>
-              <label htmlFor="nombre">Nombres y Apellidos</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Nombre y apellido"
-                value={form.nombre}
-                onChange={handleChange}
-              />
-              <label htmlFor="email">Correo Electronico</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Correo Electronico"
-                value={form.email}
-                onChange={handleChange}
-              />
-              <label htmlFor="phone">Numero de celular</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="+51"
-                value={form.phone}
-                onChange={handleChange}
-              />
-              <p>Escoge tu genero</p>
-              <select name="genero" onChange={handleChange} defaultValue="">
-                <option value="">---</option>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-              </select>
-              <label htmlFor="textarea">Mensaje</label>
-              <textarea
-                value={form.textarea}
-                onChange={handleChange}
-                name="texarea"
-              />
-              <input type="submit" />
+              <div>
+                <label htmlFor="nombre">Nombres y Apellidos</label>
+                <br></br>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Nombre y apellido"
+                  value={form.nombre}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Correo Electronico</label>
+                <br></br>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Correo Electronico"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="phone">Numero de celular</label>
+                <br></br>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+51"
+                  value={form.phone}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <p>Escoge tu genero</p>
+                <select name="genero" onChange={handleChange} defaultValue="">
+                  <option value="">---</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="textarea">Mensaje</label>
+                <br></br>
+                <textarea
+                  value={form.textarea}
+                  onChange={handleChange}
+                  name="texarea"
+                  placeholder="Escribe tu comentario"
+                />
+              </div>
+              <div>
+                <br></br>
+                <input type="submit" />
+              </div>
             </form>
           </div>
         </div>
