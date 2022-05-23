@@ -8,6 +8,7 @@ import JSData from "../../IMG/javaScript.png";
 import reactData from "../../IMG/react.svg";
 import githubData from "../../IMG/github.svg";
 import azureData from "../../IMG/azure.svg";
+import sqlData from "../../IMG/sql.png";
 
 export const Skills = () => {
   //   const defaultOptions = {
@@ -33,56 +34,67 @@ export const Skills = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
         >
-          <div>
-            <div title="HTML5">
-              <img
-                src={html5Data}
-                alt="IconoHtml5"
-                width="40px"
-                height="40px"
-              />
-            </div>
-            <div title="CSS3">
-              <img src={css3Data} alt="Iconocss3" width="40px" height="40px" />
-            </div>
-            <div title="BOOSTRAP">
-              <img
-                src={bosstrapData}
-                alt="Iconoboostrap"
-                width="40px"
-                height="40px"
-              />
-            </div>
-            <div title="JavaScript">
-              <img src={JSData} alt="IconoJS" width="40px" height="40px" />
-            </div>
-            <div title="REACT">
-              <img
-                src={reactData}
-                alt="Iconoreact"
-                width="40px"
-                height="40px"
-              />
-            </div>
-            <div title="GITHUB">
-              <img
-                src={githubData}
-                alt="Iconogithub"
-                width="40px"
-                height="40px"
-              />
-            </div>
-            <div title="Microsoft Azure">
-              <img
-                src={azureData}
-                alt="Iconoazure"
-                width="40px"
-                height="40px"
-              />
-            </div>
+          <div className="skills__container-animation-html5" title="HTML5">
+            <img
+              src={html5Data}
+              alt="IconoHtml5"
+              width="100px"
+              height="100px"
+            />
+          </div>
+          <div className="skills__container-animation-css3" title="CSS3">
+            <img src={css3Data} alt="Iconocss3" width="100px" height="100px" />
+          </div>
+          <div
+            className="skills__container-animation-boostrap"
+            title="BOOSTRAP"
+          >
+            <img
+              src={bosstrapData}
+              alt="Iconoboostrap"
+              width="100px"
+              height="100px"
+            />
+          </div>
+          <div
+            className="skills__container-animation-javascript"
+            title="JavaScript"
+          >
+            <img src={JSData} alt="IconoJS" width="100px" height="100px" />
+          </div>
+          <div className="skills__container-animation-react" title="REACT">
+            <img
+              src={reactData}
+              alt="Iconoreact"
+              width="100px"
+              height="100px"
+            />
+          </div>
+          <div className="skills__container-animation-github" title="GITHUB">
+            <img
+              src={githubData}
+              alt="Iconogithub"
+              width="100px"
+              height="100px"
+            />
+          </div>
+          <div
+            className="skills__container-animation-azure"
+            title="Microsoft Azure"
+          >
+            <img
+              src={azureData}
+              alt="Iconoazure"
+              width="100px"
+              height="100px"
+            />
+          </div>
+          <div className="skills__container-animation-sql" title="SQL">
+            <img src={sqlData} alt="Iconosql" width="100px" height="100px" />
           </div>
         </div>
       </div>
     </div>
+    // </div>
   );
 };

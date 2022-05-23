@@ -35,9 +35,54 @@
       // border: 1px solid red;
       width: 50%;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       // gap: 100px;
       // padding: 30px;
+      &-html5 {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-css3 {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-boostrap {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-javascript {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-react {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-html5 {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-github {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-azure {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &-sql {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }
