@@ -3,7 +3,7 @@ import { AboutMe } from "../Pages/AboutMe/AboutMe";
 import { Home } from "../Pages/Home/Home";
 import { Skills } from "../Pages/Skills/Skills";
 import { Contact } from "../Pages/Contact/Contact";
-// import { Footer } from "../components/Footer/Footer";
+import { Footer } from "../components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <AboutMe />
       <Skills />
       <Contact />
+      <Footer />
     </>
   );
 }

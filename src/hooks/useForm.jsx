@@ -24,7 +24,7 @@ export const useForm = (initialForm, validateForm) => {
     setErrors(validateForm(form));
 
     if (Object.keys(errors).length === 0) {
-      alert("Formulario enviado correctamente");
+      alert("Form was sent correctly");
       setLoading(true);
       helpHttp()
         .post("https://formsubmit.co/ajax/manuel.r.seminario@gmail.com", {
@@ -37,6 +37,8 @@ export const useForm = (initialForm, validateForm) => {
         .then((res) => {
           setLoading(false);
           setResponse(true);
+          setForm(initialForm);
+          setTimeout(() => setResponse(false), 5000);
         });
     } else {
       return;

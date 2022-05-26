@@ -32,7 +32,9 @@ export const AboutMe = () => {
             corresponding achievements. If you want to know more about me you
             can visit my social networks and contact me.
           </p>
-          <Button label="Escribeme" />
+          <a href="#contact">
+            <Button label="Escribeme" />
+          </a>
         </div>
         <div className="aboutme__container-image">
           <Lottie

@@ -23,31 +23,30 @@ export const Contact = () => {
     let regexComments = /^.{1,255}$/;
 
     if (!form.name.trim()) {
-      errors.name = "El campo NOMBRE es requerido";
+      errors.name = "The NAME field is required";
     } else if (!regexName.test(form.name.trim())) {
-      errors.name = "El campo Nombre sólo acepta letras y espacios en blanco";
+      errors.name = "The NAME field only accepts letters and blank spaces";
     }
 
     if (!form.email.trim()) {
-      errors.email = "El campo EMAIL es requerido";
+      errors.email = "The EMAIL field is required";
     } else if (!regexEmail.test(form.email.trim())) {
-      errors.email = "El campo Email es incorrecto";
+      errors.email = "The EMAIL field is incorrect";
     }
 
     if (!form.phone.trim()) {
-      errors.phone = "El campo CELULAR es requerido";
+      errors.phone = "The PHONE field is required";
     } else if (!regexPhone.test(form.phone.trim())) {
-      errors.phone = "El campo Celular solo acepta numeros";
+      errors.phone = "The PHONE field only accepts numbers";
     }
 
     if (!form.gener.trim()) {
-      errors.gener = "El campo GENERO es requerido";
+      errors.gener = "The GENDER field is required";
     }
     if (!form.comments.trim()) {
-      errors.comments = "El campo COMENTARIOS es requerido";
+      errors.comments = "The COMMENTS field is required";
     } else if (!regexComments.test(form.comments.trim())) {
-      errors.comments =
-        "El campo Comentarios no debe exeder los 255 caracteres";
+      errors.comments = "The COMMENTS field must not exceed 255 characters";
     }
 
     return errors;
@@ -97,7 +96,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contact__container">
         <div className="contact__container-info">
           <div>
@@ -133,13 +132,13 @@ export const Contact = () => {
           <div>
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name">Nombres y Apellidos</label>
+                <label htmlFor="name">Name and Last Name</label>
                 <br></br>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Nombre y apellido"
+                  placeholder="Write your Name and Lastname"
                   onBlur={handleBlur}
                   value={form.name}
                   onChange={handleChange}
@@ -148,13 +147,13 @@ export const Contact = () => {
                 {errors.name && <p style={styles}>{errors.name}</p>}
               </div>
               <div>
-                <label htmlFor="email">Correo Electronico</label>
+                <label htmlFor="email">Email</label>
                 <br></br>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Correo Electronico"
+                  placeholder="Write your Email"
                   onBlur={handleBlur}
                   value={form.email}
                   onChange={handleChange}
@@ -163,13 +162,13 @@ export const Contact = () => {
                 {errors.email && <p style={styles}>{errors.email}</p>}
               </div>
               <div>
-                <label htmlFor="phone">Numero de celular</label>
+                <label htmlFor="phone">Phone Number </label>
                 <br></br>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="Coloca tu codigo + numero "
+                  placeholder="Write your phone number "
                   onBlur={handleBlur}
                   value={form.phone}
                   onChange={handleChange}
@@ -178,29 +177,29 @@ export const Contact = () => {
                 {errors.phone && <p style={styles}>{errors.phone}</p>}
               </div>
               <div>
-                <p>Escoge tu genero</p>
+                <p>Choose your gender</p>
                 <select
                   name="gener"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  defaultValue=""
+                  value={form.gener}
                   required
                 >
                   <option value="">---</option>
-                  <option value="masculino">Masculino</option>
-                  <option value="femenino">Femenino</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
                 </select>
                 {errors.gener && <p style={styles}>{errors.gener}</p>}
               </div>
               <div>
-                <label htmlFor="textarea">Mensaje</label>
+                <label htmlFor="textarea">Message</label>
                 <br></br>
                 <textarea
-                  value={form.textarea}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
                   name="comments"
-                  placeholder="Escribe tu comentario"
+                  placeholder="Write your comment"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.comments}
                   required
                 />
                 {errors.comments && <p style={styles}>{errors.comments}</p>}
