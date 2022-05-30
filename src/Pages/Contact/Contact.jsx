@@ -204,7 +204,7 @@ export const Contact = () => {
                 />
                 {errors.comments && <p style={styles}>{errors.comments}</p>}
               </div>
-              <div>
+              <div className="contact__container-formRegister-submit">
                 <br></br>
                 <input type="submit" />
               </div>

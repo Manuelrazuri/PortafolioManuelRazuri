@@ -3,8 +3,8 @@
   height: 80vh;
   display: flex;
   justify-content: center;
-  background-color: #7cefd9;
-  background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+  background-color: #cadbc8;
+  // background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
   &__container {
@@ -21,6 +21,7 @@
         font-size: 40px;
         font-family: "Open Sans", sans-serif;
         text-shadow: 2px 2px 2px black;
+        color: #9c9583;
       }
       & p {
         font-size: 20px;

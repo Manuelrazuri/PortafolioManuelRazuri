@@ -3,6 +3,7 @@
   height: auto;
   display: flex;
   align-items: center;
+  background: #828282;
   &__container {
     width: 85%;
     display: flex;
@@ -51,6 +52,18 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
+
+      & h1 {
+        font-family: "Open Sans", sans-serif;
+        text-shadow: 2px 2px 2px black;
+      }
+      & p {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      & label {
+        font-family: "Open Sans", sans-serif;
+      }
       input[type="text"],
       input[type="email"],
       input[type="tel"] {
@@ -63,15 +76,21 @@
         width: 100%;
         font-size: 1rem;
         line-height: 1;
-        background-color: transparent;
+        // background-color: transparent;
         font-family: "Open Sans", sans-serif;
       }
-    }
-    & textarea {
-      width: 450px;
-      height: 250px;
-      font-family: "Open Sans", sans-serif;
-      resize: none;
+      & textarea {
+        width: 450px;
+        height: 250px;
+        font-family: "Open Sans", sans-serif;
+        resize: none;
+        // background-color: transparent;
+      }
+      &-submit {
+        display: flex;
+        justify-content: center;
+        font-family: "Open Sans", sans-serif;
+      }
     }
     // & input {
     //   width: 300px;
